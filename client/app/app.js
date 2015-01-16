@@ -5,6 +5,7 @@ angular.module('shortly', [
   'shortly.auth',
   'ngRoute'
 ])
+//Luke comment: doesn't the following make this NOT a SPA?
 .config(function($routeProvider, $httpProvider) {
   $routeProvider
     .when('/signin', {
@@ -16,7 +17,10 @@ angular.module('shortly', [
       controller: 'AuthController'
     })
     // Your code here
-
+    .when('/links',{
+      templateUrl:'app/links/links.html',
+      controller:'LinksController'
+    })
     // We add our $httpInterceptor into the array
     // of interceptors. Think of it like middleware for your ajax calls
     $httpProvider.interceptors.push('AttachTokens');

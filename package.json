@@ -34,6 +34,8 @@
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.4.3",
     "express": "^4.4.5",
+    "faux-poe": "0.0.1",
+    "gulp": "^3.8.10",
     "jwt-simple": "^0.2.0",
     "mongoose": "^3.8.12",
     "morgan": "^1.1.1",
