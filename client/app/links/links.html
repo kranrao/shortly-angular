@@ -1,5 +1,9 @@
-<div id='container' ng-links>
+<div id='container' ng-shortly.links>
   <!-- Your html here -->
   <h1>Links!</h1>
-  <h2>{{testText}}</h2>
+    <div ng-controller="LinksController">
+      <ul >
+        <li ng-repeat="link in links">{{link}}</li>
+      </ul>
+    </div>
 </div>
