@@ -3,13 +3,23 @@ angular.module('shortly.services', [])
 .factory('Links', function ($http) {
   // Your code here
 
-  return {
+  var link={
     data:{},
-    links:["kiran.com","luke.com"],
+    links:[],
     getLinks:function(){
-      return links;
+      return $http({
+        method: 'GET',
+        url: '/api/links'
+      })
+      .then(function (resp) {
+        //this may throw an error
+
+        this.links=(resp.data);
+      });
     }
   };
+
+  return link;
 })
 .factory('Auth', function ($http, $location, $window) {
   // Don't touch this Auth service!!!
