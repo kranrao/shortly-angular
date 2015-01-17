@@ -2,8 +2,10 @@
 <!-- Your code here -->
  <h1>Shorten</h1>
   <form name="shortenForm" ng-submit='shorten()'>
-    <input type='text' ng-model='url'>
+    <input type='url' name='input' ng-model='url' required>
     <button ng-click="addLink(url)">Shorten</button>
+  <div class="error" ng-show="shortenForm.input.$error.url">
+    Not valid url!</div>
 
 </div>
 
