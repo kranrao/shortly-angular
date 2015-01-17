@@ -1,5 +1,13 @@
 <div id='container'>
 <!-- Your code here -->
+ <h1>Shorten</h1>
+  <form name="shortenForm" ng-submit='shorten()'>
+    <input type='text' ng-model='url'>
+    <button ng-click="addLink(url)">Shorten</button>
+    <hr/>
+    <pre>
+    {{link}}
+    </pre>
 
 </div>
 

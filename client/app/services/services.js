@@ -2,13 +2,14 @@ angular.module('shortly.services', [])
 
 .factory('Links', function ($http) {
   // Your code here
-  var link={};
-  link.data = {};
-  link.links = ["luke.com","kiran.com"];
-  link.getLinks = function(){
-    return "LINKS!";
-  }
-  return link;
+
+  return {
+    data:{},
+    links:["kiran.com","luke.com"],
+    getLinks:function(){
+      return links;
+    }
+  };
 })
 .factory('Auth', function ($http, $location, $window) {
   // Don't touch this Auth service!!!
