@@ -3,10 +3,15 @@
   <h1>Links!</h1>
     <div ng-controller="LinksController">
     <input ng-model="search" placeholder="filter">
-      <div class="link" ng-repeat="link in data.links | filter:search">
-      <span class="title"> {{link.title}} </span>
-      <span class="original"> {{link.url}} </span>
-      <span class="visits"> visits: <span> {{link.visits}} </span>
+
+      <div class="link" ng-repeat="link in data.links | filter:search | orderBy:'-visits'">
+      <a href={{'/api/links/'+link.code}}>
+        <span class="title"> {{link.title}} </span>
+        <span class="original"> {{link.url}} </span>
+        <span class="code">{{link.base_url+"/api/links/"+link.code}}</span>
+        <span class="visits"> visits: <span> {{link.visits}} </span>
+      </a>
       </div>
+
     </div>
 </div>
