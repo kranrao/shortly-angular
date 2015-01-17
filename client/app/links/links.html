@@ -2,8 +2,9 @@
   <!-- Your html here -->
   <h1>Links!</h1>
     <div ng-controller="LinksController">
+    <input ng-model="search" placeholder="filter">
       <ul >
-        <li ng-repeat="link in data.links">{{link.url}}</li>
+        <li ng-repeat="link in data.links | filter:search">{{link.url}}</li>
       </ul>
     </div>
 </div>
