@@ -3,8 +3,7 @@ angular.module('shortly.services', [])
 .factory('Links', function ($http) {
 
   var obj = {
-    data: {links:[]},
-    links: [],
+    data: {links: []},
     getLinks: function(){
       return $http({
         method: 'GET',
