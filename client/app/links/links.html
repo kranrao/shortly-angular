@@ -4,7 +4,8 @@
     <div ng-controller="LinksController">
     <input ng-model="search" placeholder="filter">
       <ul >
-        <li ng-repeat="link in data.links | filter:search">{{link.url}}</li>
+        <li ng-repeat="link in data.links | filter:search">
+        {{link.url}} <span style='float:right;'>visits: {{link.visits}}</span></li>
       </ul>
     </div>
 </div>
