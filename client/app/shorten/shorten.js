@@ -11,7 +11,7 @@ angular.module('shortly.shorten', [])
     $http({
       method: 'POST',
       url: '/api/links',
-      data: url
+      data: {url:url}
     })
     .then(function (resp) {
       console.log(resp.data);

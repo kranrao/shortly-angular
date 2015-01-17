@@ -4,7 +4,7 @@ angular.module('shortly.services', [])
   // Your code here
 
   var link={
-    data:{},
+    data:{links:[]},
     links:[],
     getLinks:function(){
       return $http({
@@ -13,8 +13,9 @@ angular.module('shortly.services', [])
       })
       .then(function (resp) {
         //this may throw an error
-
-        this.links=(resp.data);
+        console.log(resp.data);
+        link.data.links=resp.data;
+        return(resp.data);
       });
     }
   };
