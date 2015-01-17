@@ -10,6 +10,7 @@ angular.module('shortly.services', [])
         url: '/api/links'
       })
       .then(function (resp) {
+        console.log(resp.data);
         return obj.data.links = resp.data;
       });
     }

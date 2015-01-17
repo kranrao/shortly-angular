@@ -1,0 +1,4 @@
+- style links so they show shortened code
+- routes that are shortened code need to go through -- currently, everything redirects to '/'
+- finish validations -- i.e. alert the user that what they are typing or have entered is invalid
+- finish sorting and filtering
